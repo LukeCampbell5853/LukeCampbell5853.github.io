@@ -122,6 +122,9 @@
           
         <path class="arrow" id="amines_amides" d="M 30 310 Q 30 370 30 440 Q 30 510 54 510" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
         <path d="M 58.88 510 L 51.88 513.5 L 53.63 510 L 51.88 506.5 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+
+        <path class="arrow" id="alcohols_amines" d="M 260 270 L 126.37 269.98" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 121.12 269.98 L 128.12 266.48 L 126.37 269.98 L 128.12 273.48 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
         <!--end arrows-->
 
         <!--start chemical info-->
