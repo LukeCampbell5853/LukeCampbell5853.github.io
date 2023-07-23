@@ -33,6 +33,11 @@ diagram.addEventListener("load", function() {
     document.getElementById("diagram").style.display = "none";
   }, false);
 
+  svg.getElementById("ketones_alcohols").addEventListener("mousedown", function() {
+    document.getElementById("aldehydes_alcohols").style.display = "block";
+    document.getElementById("diagram").style.display = "none";
+  }, false);
+
 }, false);
 
 var crosses = document.getElementsByClassName("back")
