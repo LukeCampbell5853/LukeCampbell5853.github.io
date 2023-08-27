@@ -1,0 +1,44 @@
+body{
+  background-attachment:fixed;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+h1,p,li{
+  color:white;
+  font-family:sans-serif;
+}
+
+h6{
+  font-family:sans-serif;
+  color:grey;
+  font-style:italic;
+  margin:0 2.5vh;
+}
+
+h1{
+  margin:10vh 2.5vh 2.5vh 2.5vh;
+}
+
+p{
+  margin:4vh 2.5vh;
+}
+
+li{
+  margin:0 2.5vh;
+}
+
+p>a{
+  color:white;
+  text-decoration:underline;
+}
+
+img,iframe{
+  height:auto;
+  margin:0 2.5vh;
+}
+
+iframe{
+  margin:0 2.5vh;
+}
