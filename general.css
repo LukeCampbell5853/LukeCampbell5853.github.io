@@ -1,0 +1,17 @@
+#content>a>div{
+  display:block;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  text-align:center;
+  transition:transform 0.25s;
+}
+
+#content>a>div>h1{
+  color:white;
+  cursor:pointer;
+}
+
+#content>a>div:hover{
+  transform: scale(1.05);
+}
