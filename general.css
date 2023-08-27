@@ -1,0 +1,11 @@
+body>h1,p,a{
+  color:white;
+}
+
+p>a{
+  text-decoration:underline;
+}
+
+i{
+  color:white;
+}
