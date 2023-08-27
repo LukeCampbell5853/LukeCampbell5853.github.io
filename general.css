@@ -1,0 +1,43 @@
+#stories{
+  overflow-x:scroll;
+  white-space:nowrap;
+  width:100%;
+  display:flex;
+  background-color:white;
+}
+
+#stories>a>div{
+  overflow:hidden;
+  white-space:wrap;
+  background-color:white;
+  display:block;
+  flex-shrink: 0;
+  cursor:pointer;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  text-align:center;
+  transition:transform 0.25s;
+}
+
+#stories>a>div:hover{
+  transform:scale(1.05);
+}
+
+#stories>a>div>h1{
+  margin:-1vw;
+  color:white;
+}
+
+#centrepiece>div:first-child{text-align:center}
+
+#centrepiece>div:nth-child(2){
+  text-align:center;
+  color:white;
+}
+
+#centrepiece>div:nth-child(2)>span{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
