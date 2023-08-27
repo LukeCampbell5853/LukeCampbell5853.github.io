@@ -1,0 +1,10 @@
+#navbar>a:first-child{
+  font-size:4vh;
+  padding:0;
+  text-align:center;
+  min-width:5vh;
+}
+
+#navbar:hover{
+  overflow-x:scroll;
+}
