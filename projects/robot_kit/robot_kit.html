@@ -50,8 +50,7 @@
     a series of random and disconnected demonstrations), so all the individual components would add together to one
     bigger robot.</p>
 
-  <p>I started with the individual components. The first I worked on was power management. For this I used two voltage
-    regulators. A 5V one for the motors, and a 3.3V one for the microcontroller. This would allow me to power the
+  <p>I started with the individual components. The first I worked on was power management. For this I used a 3.3V regulator to provide power to the microcontroller and also the logic voltage for the motor driver. This would allow me to power the
     circuit with a 4-6 AA batteries. The voltage regulators (and the calculations involved with them) will also give
     users an introduction into controlling power.</p>
 
@@ -60,10 +59,10 @@
     Pi Pico up the citcuit was ready to go, and worked well!</p>
 
   <img src="robot_close_up.jpg">
-  <h6>Some of the components of my robot. Raspberry Pi Pico (left). Voltage regulator circuits (centre). Motor driver IC
+  <h6>Some of the components of my robot. Raspberry Pi Pico (left). Voltage regulator circuit (centre). Motor driver IC
     (right).</h6>
 
-  <p>Now I had a few of the components sorted it was time to lasercut a frame. By this point I already knew the bulk of the electronics would be contained on a breadboard, so I needed to make my frame around that. I also had to make room for the other sensors I had decided to put in: an ultrasonic distance sensor, and a servo with a colour sensor on it.</p>
+  <p>Now I had a few of the components sorted it was time to lasercut a frame. By this point I already knew the bulk of the electronics would be contained on a breadboard, so I needed to make my frame around that. I also had to make room for the other sensor I had decided to put in: an ultrasonic distance sensor.</p>
 
   <p>I drew up a frame on Adobe Illustrator, then sent it to my laser cutter.</p>
 
@@ -75,7 +74,7 @@
   <img src="glued_frame.jpg">
   <h6>The frame while the glue was drying.</h6>
 
-  <p>After the glue had dried I assembled the voltage regulators, motor driver, and microcontroller on the circuit, then inserted the motors and fed the wires through the frame back to the breadboard.</p>
+  <p>After the glue had dried I assembled the voltage regulator, motor driver, and microcontroller on the circuit, then inserted the motors and fed the wires through the frame back to the breadboard.</p>
 
   <p>Adding bluetooth was a bit of a pain. Not on the electronics side, that was fairly simple as serial communication is a robust and much used system. The difficult bit was choosing which app to use. After downloading a dozen on both iPhones and Android apps, I can recommend '<a href="https://apps.apple.com/us/app/bluetooth-for-arduino/id1505096526">Bluetooth for Arduino</a> for iOS and '<a href="https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal&hl=en_GB">Serial Bluetooth Terminal</a>' for Android. The latter is the better app by far, but the former is usable too.</p>
 
@@ -84,8 +83,13 @@
   <iframe src="https://youtube.com/embed/q3xbPvqetJs?feature=share"></iframe>
   <h6>Testing my robot's turning.</h6>
 
-  <p>The next things I have to do is sort out the distance sensor, servo, and colour sensor, screen, and buttons, then write the program for it. Once the kit is complete I aim to film video tutorials explaining not only how they are put together but also why things work and how they are applicable - then sell them on Etsy.</p>
+  <p>Using the OLED was a fun challenge. I'm using the microPython ssd1306 library so the programming side was easy, so the biggest problem was designing what to put on it. Rather than programming individual pixels I chose to use the online program [Pixilart](https://www.pixilart.com/) to make my graphics. I then downloaded them as jpgs, and wrote a Python program to convert all the images into a list of points, which I could give to the microcontroller. This worked well, and I soon had a working screen with graphics.</p>
 
+  <img src="oled_graphic.jpg">
+  <h6>The oled displaying one of my graphics. The icon in the bottom left indicates bluetooth connectivity, the icon in the bottom right indicates the direction. The text at the top shows whether it is in RC or autonomous mode, and the eyes of the face look to wherever it is moving.</h6>
+
+  <p>Next I have to write a script for the ultrasonic distance sensor, program all the components together, and film tutorial videos.</p>
+  
   <p></p>
 
   <script src="../../script.js"></script>
