@@ -2,100 +2,12 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="../../project_page_style/general.css">
-  <link rel="stylesheet" href="../../project_page_style/landscape.css">
-
-  <link rel="stylesheet" href="../../all_style/general.css">
-  <link rel="stylesheet" href="../../all_style/landscape.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-
-  <title>Luke Campbell - Robot kit</title>
+  <title>Redirecting...</title>
+  <script>
+    window.onload = function () {
+      location.href = "https://lukecampbell5853.github.io/projects/robot_kit/";
+    }
+  </script>
 </head>
-
-<body
-  style="background-image:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),url('projects/robot_kit/robot_kit_arial.jpg')">
-  <div id="navbar">
-    <a> &#8801 </a>
-    <a href="../../index.html">HOME</a>
-    <!--<a href="projects.html">PROJECTS</a>-->
-    <!--<a>RESUME</a>-->
-    <a href="../../contact.html">CONTACT</a>
-  </div>
-
-  <h1>Robot kit</h1>
-
-  <p>When I was first learning to use programmable electronics I purchased one of the many 'Arduino starter kits', which
-    contained the microcontroller and a variety of sensors, a display, and a servo. This was helpful to start, but it
-    only got so far. I was able to put it together, but the instructions and videos only really told me how to put it
-    together, not what I was doing or why it worked. Years later, I am now designing a started kit of my own which I
-    hope will provied others with the tools and knowledge I had to scrounge for myself.</p>
-
-  <p>After doing some brainstorming I came up with the following things I wanted to have included in my kit, that aren't
-    in many others:</p>
-  <ul>
-    <li>Power - powering the microcontroller and other components from an external source.</li>
-    <li>Higher power actuators - not all things can be run directly off a microcontroller, some require controller
-      modules.</li>
-    <li>ICs - using other ICs was a massive hurdle for me, but they have so many uses I wanted my users to be used to
-      them.</li>
-    <li>Ohm's law - not a difficult concept but so important and users mightn't have known it before.</li>
-    <li>Bluetooth connectivity - in today's world interconnectivity is crucial, and it's never too early to start.</li>
-    <li>Screen - displaying things on a screen is essential in the modern age, and it will be a part of my kit.</li>
-  </ul>
-
-  <p>On top of all this I wanted those using my kit to get an impressive and satisfying project at the end (rather than
-    a series of random and disconnected demonstrations), so all the individual components would add together to one
-    bigger robot.</p>
-
-  <p>I started with the individual components. The first I worked on was power management. For this I used a 3.3V regulator to provide power to the microcontroller and also the logic voltage for the motor driver. This would allow me to power the
-    circuit with a 4-6 AA batteries. The voltage regulators (and the calculations involved with them) will also give
-    users an introduction into controlling power.</p>
-
-  <p>Next I moved to the motor driver IC. I was using a L293D IC which is a very commonly used IC (and is the basis of
-    many 'plug and play' motor driver units). After soldering some jumper wires to the motors and hooking the Raspberry
-    Pi Pico up the citcuit was ready to go, and worked well!</p>
-
-  <img src="robot_close_up.jpg">
-  <h6>Some of the components of my robot. Raspberry Pi Pico (left). Voltage regulator circuit (centre). Motor driver IC
-    (right).</h6>
-
-  <p>Now I had a few of the components sorted it was time to lasercut a frame. By this point I already knew the bulk of the electronics would be contained on a breadboard, so I needed to make my frame around that. I also had to make room for the other sensor I had decided to put in: an ultrasonic distance sensor.</p>
-
-  <p>I drew up a frame on Adobe Illustrator, then sent it to my laser cutter.</p>
-
-  <iframe src="https://youtube.com/embed/mWqkqxtxx_c?feature=share"></iframe>
-  <h6>A timelapse of my laser cutter cutting a prototype frame.</h6>
-
-  <p>The holes when I made them were a little too large, so after gluing the pieces together I had a functional frame.</p>
-
-  <img src="glued_frame.jpg">
-  <h6>The frame while the glue was drying.</h6>
-
-  <p>After the glue had dried I assembled the voltage regulator, motor driver, and microcontroller on the circuit, then inserted the motors and fed the wires through the frame back to the breadboard.</p>
-
-  <p>Adding bluetooth was a bit of a pain. Not on the electronics side, that was fairly simple as serial communication is a robust and much used system. The difficult bit was choosing which app to use. After downloading a dozen on both iPhones and Android apps, I can recommend '<a href="https://apps.apple.com/us/app/bluetooth-for-arduino/id1505096526">Bluetooth for Arduino</a> for iOS and '<a href="https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal&hl=en_GB">Serial Bluetooth Terminal</a>' for Android. The latter is the better app by far, but the former is usable too.</p>
-
-  <p>I couldn't wait to take my robot for a spin, so before I put the rest of the sensors in I wrote a quick program to test out its agility. I had previously pulled one of the motors apart (completely by accident) as I was fitting it into the robot, and though I put it together, I must have damaged it in the process - so one motor was very weak. But regardless, it worked.</p>
-
-  <iframe src="https://youtube.com/embed/q3xbPvqetJs?feature=share"></iframe>
-  <h6>Testing my robot's turning.</h6>
-
-  <p>Using the OLED was a fun challenge. I'm using the microPython ssd1306 library so the programming side was easy, so the biggest problem was designing what to put on it. Rather than programming individual pixels I chose to use the online program [Pixilart](https://www.pixilart.com/) to make my graphics. I then downloaded them as jpgs, and wrote a Python program to convert all the images into a list of points, which I could give to the microcontroller. This worked well, and I soon had a working screen with graphics.</p>
-
-  <img src="oled_graphic.jpg">
-  <h6>The oled displaying one of my graphics. The icon in the bottom left indicates bluetooth connectivity, the icon in the bottom right indicates the direction. The text at the top shows whether it is in RC or autonomous mode, and the eyes of the face look to wherever it is moving.</h6>
-
-  <p>Next I have to write a script for the ultrasonic distance sensor, program all the components together, and film tutorial videos.</p>
-
-  <h6>Last updated: 02/09/2023.</h6>
-  
-  <p></p>
-
-  <script src="../../script.js"></script>
-
-</body>
 
 </html>
