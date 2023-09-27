@@ -1,62 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="../../project_page_style/general.css">
-    <link rel="stylesheet" href="../../project_page_style/landscape.css">
-    
-    <link rel="stylesheet" href="../../all_style/general.css">
-    <link rel="stylesheet" href="../../all_style/landscape.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-    
-    <title>Luke Campbell - PyGraphica</title>
-  </head>
-  <body style="background-image:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),url('PyGraphica_PyPI.jpg')">
-    <div id="navbar">
-      <a>  &#8801  </a>
-      <a href="../../index.html">HOME</a>
-      <!--<a href="projects.html">PROJECTS</a>-->
-      <!--<a>RESUME</a>-->
-      <a href="../../contact.html">CONTACT</a>
-    </div>
-    
-    <h1>PyGraphica</h1>
+<head>
+  <title>Redirecting...</title>
+  <script>
+    window.onload = function () {
+      location.href = "https://lukecampbell5853.github.io/projects/pygraphica/";
+    }
+  </script>
+</head>
 
-    <p>Check out the installation and user guides <a href="https://pypi.org/project/PyGraphica/" target="_blank">here</a>.</p>
-
-    <p>If you prefer to listen to this I presented PyGraphica at PyConAu 2023. My section starts at <a href="https://www.youtube.com/watch?v=Z60fVOQJzpc&t=2718s">45:18</a>.</p>
-
-    <iframe src="https://www.youtube.com/embed/Z60fVOQJzpc?start=2718"></iframe>
-    <h6>PyConAU 2023 student showcase.</h6>
-    
-    <p>When I was first learning to program it took me a long time to get to the point of making functional GUIs and games (Python was my first language). It was always going to be a learning curve, but the existing Python GUI/game libraries made it all the more difficult. These libraries were very powerful, but not accessible to the level of experience I had.</p>
-
-    <p>Years later, I decided to do something about it. By this point I was well up to speed on the major libraries like PyGame, Kivy, and Tkinter - and so I decided to make my own library. I'd start at the base, and build everything up until I had all the tools necessary to build an app or game presented in an accessible package.</p>
-
-    <p>The first step was to choose a low level language to build in. Most of these are in C, so it would also need to be one with a Python wrapper. The two options which I seriously considered were OpenGL and SDL2. I experimented with both, however in the end I chose SDL2 (with the PySDL2 wrapper) as it was easier to install on both Windows and Linux, and so would produce fewer dependency issues later on.</p>
-
-    <p>The first part of building the library was relatively simple. After setting out the nomenclature and other conventions I created classes for:</p>
-
-    <ul>
-      <li>Windows</li>
-      <li>Lines</li>
-      <li>Rectangles</li>
-      <li>Text</li>
-      <li>Textboxes</li>
-      <li>Images</li>
-    </ul>
-
-    <p>The first four were simple. The last two were a bit more complicated. Creating an image class involved dealing with editing the image first (cropping, resizing, stretching, etc.), then creating an SDL2 image object to be displayed with each screen update. Creating a textbox class involved drawing the background rectangle, keeping track of whether the user had selected or deselected the textbox, and what key changes had occured.</p>
-
-    <p>After finishing all the individual classes and a few additional functions (e.g. the update function - unlike other libraries mine will update all the objects at once), I was ready to publish on PyPI. Having never done this before it took a while to sort out the bugs, but eventually it was sorted and PyGraphica was released!</p>
-
-    <p>I hope to continue to add functionality to PyGraphica in the future, and am currently using it to develop an app for NavCS. If you want to have a look at the code for PyGraphica you can check out the Github repo <a href="https://github.com/LukeCampbell5853/PyGraphica">here</a>.</p>
-
-    <p></p>
-
-    <script src="../../script.js"></script>
-    
-  </body>
 </html>
