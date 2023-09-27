@@ -1,59 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="../../project_page_style/general.css">
-    <link rel="stylesheet" href="../../project_page_style/landscape.css">
-    
-    <link rel="stylesheet" href="../../all_style/general.css">
-    <link rel="stylesheet" href="../../all_style/landscape.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-    
-    <title>Luke Campbell - Timetable</title>
-  </head>
-  <body style="background-image:linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),url('timetable_updating.jpg')">
-    <div id="navbar">
-      <a>  &#8801  </a>
-      <a href="../../index.html">HOME</a>
-      <!--<a href="projects.html">PROJECTS</a>-->
-      <!--<a>RESUME</a>-->
-      <a href="../../contact.html">CONTACT</a>
-    </div>
-    
-    <h1>Timetable</h1>
+<head>
+  <title>Redirecting...</title>
+  <script>
+    window.onload = function () {
+      location.href = "https://lukecampbell5853.github.io/projects/timetable/";
+    }
+  </script>
+</head>
 
-    <p>When I was in school I was in the habit of using my phone to access my timetable. The frequent room and time changes made paper timetables obsolete.</p>
-    
-    <p>As such when my school introduced new rules banning phone use within the building, I needed to come up with a new solution.</p>
-    
-    <p>To fix my problem I built a portable electronic timetable. It could access my updated timetable from the internet, and display it on a small OLED screen, but was small enough to fit easily in my pocket. This served me well as the school had no issue with me using it, and I could always have the most updated version of my timetable.</p>
-
-    <p>To start off with I built a bot that could log onto the school's timetable service - Edumate, and scrape all of my timetable data for me. This took some experimentation but eventually I succeeded using Selenium and some slow painstaking experimentation.</p>
-
-    <p>I already knew I couldn't run this on a microcontroller, or at least not well, so the next step was to design an API which would be hosted online and do the heavy-duty scraping. This API was simple and robust. When it recieved request sent with the correct code it would scrape my timetable and send the day's classes back.</p>
-    
-    <p>My first prototype was very simple. To reduce wiring I used a Raspberry Pi Pico and an OLED shield with two inbuilt buttons. This was powered by a 5V power bank via the Pico's micro-usb port. The entire assembly was kept within a ziplock bag for protection.</p>
-
-    <img src="first_prototype.jpg">
-    <h6>My first prototype, powered by a powerbank and contained inside a ZipLock bag.</h6>
-
-    <p>This prototype worked for a few weeks, but was soon discarded after I built a more permanent prototype: version 2. The second version used the same microcontroller and OLED shield, but had a small rechargable LiPo battery (with corresponding chargin module and 5V supply module) built into the case. This not only saved a lot of space but saved me from dissassembling the device when I wanted to recharge the power bank.</p>
-
-    <img src="inside_timetable.jpg">
-    <h6>The inside of my timetable. LiPo charging module (left). LiPo battery (centre). OLED shield (right). Behind is the 5V regulator and the Raspberry Pi Pico.</h6>
-
-    <p>I laser-cut a case for it which provided more protection than the zip-lock bag and and kept it all within a small box.</p>
-
-    <img src="outside_timetable.jpg">
-    <h6>My timetable with the front of the case on. I lasercut the text the wrong way 'round and put the space for the buttons on the wrong side so had to recut, but this worked for a while.</h6>
-
-    <p></p>
-
-    <p></p>
-
-    <script src="../../script.js"></script>
-    
-  </body>
 </html>
